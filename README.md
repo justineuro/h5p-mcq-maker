@@ -1,6 +1,6 @@
 # h5p-mcq-maker  
 
-This repository contains a bash script for creating an H5P of multiple-choice questions (with a single correct answer) using the [H5P Question Set template](https://h5p.org/question-set) via the linux command line. Simply:  
+This repository contains a bash script for creating an [H5P](https://h5p.org) of multiple-choice questions (with a single correct answer) using the [H5P Question Set template](https://h5p.org/question-set) via the linux command line. Simply:  
 ```sh
 ./mcq2h5p.sh myMCQuestions.txt
 ```
@@ -29,7 +29,7 @@ The H5P is created in the main directory and is called `myNewH5P-mcq.h5p`.  Ther
 
 * upload into a platform (e.g., Learning Management Systems (LMSs)); allows for further editing.
 * view using [h5p-view](https://github.com/justineuro/h5p-view) (a bash script that implements [h5p-standalone](https://github.com/tunapanda/h5p-standalone) to allow viewing/playing the H5P via the linux command line).
-* use [h5p-standalone](https://github.com/tunapanda/h5p-standalone) directly (as in [h5p-misc-math-001](https://github.com/justineuro/h5p-misc-math-001) or [h5p-byBrowser](https://github.com/justineuro/h5p-view)).
+* use [h5p-standalone](https://github.com/tunapanda/h5p-standalone) directly (as in [h5p-misc-math-001](https://justineuro.github.io/h5p-misc-math-001/) or [h5p-byBrowser](https://justineuro.github.io/h5p-byBrowser/)).
 
 ## Instructions on use
 To use:
@@ -37,7 +37,7 @@ To use:
 * Clone this repository: `git clone https://github.com/justineuro/h5p-mcq-maker.git`.
 * Prepare a plain text file, say `myMCQuestions.txt` (it may be some other filename), containing your MC questions and answers written in [H5P Question Set template markup](https://h5p.org/question-set), and save it under the `h5p-mcq-maker` directory that you just cloned.
 * Edit the `control.txt` file to set the parameters for your new H5P (includes  `TITLE`, `AUTHOR`, `LICENSE`, `INTRODUCTION`, `PASS_PERCENTAGE`, `DISABLE_BACKWARDS_NAVIGATION`, `RANDOM_QUESTIONS`, and `POOL_SIZE`; see `mcq2h5p.sh` for a description of these parameters).
-* At a linux command line within your `h5p-mcq-maker` directory issue the command:
+* At a linux command line within your `h5p-mcq-maker` directory, issue the command:
 ```sh
 ./mcq2h5p.sh myMCQuestions.txt
 ```

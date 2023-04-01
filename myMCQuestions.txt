@@ -1,0 +1,59 @@
+1. Which one of the following is a number?
+*1
+p
+q
+r
+
+2. Which one of the following is a letter?
+1
+2
+*A
+
+3. 2 + 3 = 
+3 
+4
+*5
+6
+
+4. Which statement is true?
+\\\\(\\\\sqrt{5}\\\\) is a rational number
+\\\\(0\\\\) is a positive number
+*\\\\(\\\\sqrt{3}\\\\) is a real number
+\\\\(\\\\sqrt{4}\\\\) is an irrational number
+
+5. The tenths digit of the number 7,654.321 is _____.
+4
+2
+6
+*3
+
+6. (2)(-6) + (2 x 3) = ____.
+*-6
+12
+6
+0
+
+7. 3 - 2 = _____.
+1/2
+0
+*1
+-1
+
+8. Jimmy has ₱10,000 in the bank.  If he expects to earn ₱100 in interest by the end of one year.  What is the annual rate of interest?
+2%
+4%
+*1%
+6%
+
+9. The greatest common divisor (GCD) of 21, 14, and 7 is _____.
+14
+*7
+21
+1
+
+10. The property of real numbers which describes (1 + 2) + 3 = 3 + (1 + 2) is _____.
+*Commutative
+Associative
+Distributive
+Reflexive
+

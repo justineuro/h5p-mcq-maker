@@ -51,7 +51,7 @@ This folder includes (among others):
 * [`mcq2h5p.sh`](./mcq2h5p.sh) - a bash script that converts a plain text file containing mutiple-choice questions and answers to a [Question Set H5P](https://h5p.org/question-set)
 * [`myNewH5P-mcq`](./dist) - a folder that contains the libraries inside the [`question-set-616.h5p`](https://h5p.org/question-set) re-use template that's available from the [Examples & downloads section](https://h5p.org/content-types-and-applications) at [https://h5p.org](https://h5p.org); the `h5p.json` and `content/content.json` files will be over-written to produce your new H5P.
 * [`control.txt`](./control.txt) -  a plain text file containing the control parameters for your new H5P (e.g., `TITLE`, `AUTHOR`, `LICENSE`, `INTRODUCTION`, `PASS_PERCENTAGE`, `DISABLE_BACKWARDS_NAVIGATION`, `RANDOM_QUESTIONS`, and `POOL_SIZE`; these are used for creating the `h5p.json` and `content.json` of your new H5P).  You would want to edit this to suit your own specifications.
-* [`myMCQuestions.txt`](./myMCQuestions.txt) - an example of 10 multiple-choice questions, five (5) of which are selected each time the H5P is viewed/played.
+* [`myMCQuestions.txt`](./myMCQuestions.txt) - an example of 10 multiple-choice questions, five (5) of which are selected each time the H5P is viewed/played.  (Note that the `MathJax` symbol "`\`" has to be triply escaped.  Thus, `\(` should be written as `\\\\(` and `\sqrt{2}` should be written as `\\\\sqrt{2}`.)
 * [`myNewH5P-mcq.h5p`](./myNewH5P-mcq.h5p) - the H5P created by `mcq2h5p.sh` from `myMCQuestions.txt`.
 
 

@@ -39,7 +39,7 @@ r
 *1
 -1
 
-8. Jimmy has ₱10,000 in the bank.  If he expects to earn ₱100 in interest by the end of one year.  What is the annual rate of interest?
+8. Jimmy has ₱10,000 in the bank.  If he expects to earn ₱100 in interest by the end of one year, what is the annual rate of interest?
 2%
 4%
 *1%

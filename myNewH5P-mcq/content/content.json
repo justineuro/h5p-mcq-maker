@@ -127,7 +127,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "1f70dc8a-1989-4e54-bfe9-abe33ce29a36",
+			"subContentId": "fa06e08a-97c0-448c-85c4-8ae704701715",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -209,7 +209,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "884d3af0-953c-42be-97f8-266efb2c91e5",
+			"subContentId": "9113c58e-2689-4545-a23a-ed83915b9544",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -296,7 +296,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "5df6f75d-3ca7-4869-ad2c-1ed9de9f6ad0",
+			"subContentId": "33c99671-1fd9-4d2d-bae9-49c996581f8b",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -383,7 +383,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "ec35d76f-9c2b-49f2-900c-d4aa62ba36b0",
+			"subContentId": "c9813575-6f15-4231-987b-24058d660562",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -470,7 +470,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "43147f88-f09c-458e-b601-ffd31f7ad71b",
+			"subContentId": "dc017cc3-01d7-469e-8063-57f2ae93c8c9",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -557,7 +557,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "99c1d063-3857-4ef7-8b25-6924c812a675",
+			"subContentId": "869d4b3e-3eab-4660-8a67-20ab3abafc06",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -644,7 +644,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "226a0950-fcc7-46dd-85c0-0e4e605c6c16",
+			"subContentId": "a7a04223-494a-403a-abe8-f38d9fe7bd4b",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -654,7 +654,7 @@
 	{
 		"library": "H5P.MultiChoice 1.14",
 		"params": {
-			"question": "Jimmy has ₱10,000 in the bank. If he expects to earn ₱100 in interest by the end of one year. What is the annual rate of interest?",
+			"question": "Jimmy has ₱10,000 in the bank. If he expects to earn ₱100 in interest by the end of one year, what is the annual rate of interest?",
 			"answers": [
 					{
 						"text": "2%",
@@ -731,7 +731,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "c71792ae-b6d2-4624-84bb-a07984edf6d0",
+			"subContentId": "96fd2f20-b303-4b35-8ef7-56b72dd24d97",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -818,7 +818,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "94808cf0-8c63-462a-9530-9d983c9a3835",
+			"subContentId": "82ba7cc3-0358-4206-b381-49671cd770ed",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -905,7 +905,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "9e0720c8-b208-4e47-8dc9-bffe1fab1369",
+			"subContentId": "609d4a24-ac17-4dfd-8561-20873ddecba7",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",

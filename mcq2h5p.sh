@@ -349,7 +349,7 @@ mv ./h5p.json ./myNewH5P-mcq
 mv ./content.json ./myNewH5P-mcq/content
 if [ -e "./myNewH5P-mcq.h5p" ]; then rm ./myNewH5P-mcq.h5p; fi
 cd myNewH5P-mcq
-zip -r ../myNewH5P-mcq.h5p * >/dev/null
+zip -r -D -X ../myNewH5P-mcq.h5p * >/dev/null
 cd $OLDPWD
 echo -e "\nThe h5p.json file was created in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq/h5p.json${NORM}"
 echo -e "The content.json that was created is in: ${BOLD}${YELLOW}./myNewH5P-mcq/content/content.json${NORM}"

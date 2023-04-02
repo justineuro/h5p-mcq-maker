@@ -27,7 +27,7 @@ z
 (Note: Tips, correct- and wrong-answer feedback have not been implemented.  One cannot use them for now.)  
 The H5P is created in the main directory and is called `myNewH5P-mcq.h5p`.  There are a number of ways to view/play this newly created H5P:  
 
-* upload into a platform (e.g., Learning Management Systems (LMSs)); allows for further editing.
+* upload into a platform (e.g., [h5p.org's H5P test drive page](https://h5p.org/testdrive-h5p), Learning Management Systems (LMSs)); allows for further editing.
 * view using [h5p-view](https://github.com/justineuro/h5p-view) (a bash script that implements [h5p-standalone](https://github.com/tunapanda/h5p-standalone) to allow viewing/playing the H5P via the linux command line).
 * use [h5p-standalone](https://github.com/tunapanda/h5p-standalone) directly (as in [h5p-misc-math-001](https://justineuro.github.io/h5p-misc-math-001/) or [h5p-byBrowser](https://justineuro.github.io/h5p-byBrowser/)).
 

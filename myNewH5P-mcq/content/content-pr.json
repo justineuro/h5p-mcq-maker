@@ -15,6 +15,7 @@
     "showRetryButton": true,
     "noResultMessage": "Finished",
     "message": "Your result:",
+    "scoreBarLabel": "You got @finals out of @totals points",
     "overallFeedback": [
       {
         "from": 0,
@@ -24,31 +25,32 @@
     "solutionButtonText": "Show solution",
     "retryButtonText": "Retry",
     "finishButtonText": "Finish",
+    "submitButtonText": "Submit",
     "showAnimations": false,
     "skippable": false,
     "skipButtonText": "Skip video"
   },
   "override": {
-    "checkButton": true,
-    "showSolutionButton": "on",
-    "retryButton": "on"
+    "checkButton": true
   },
   "texts": {
     "prevButton": "Previous question",
     "nextButton": "Next question",
     "finishButton": "Finish",
+    "submitButton": "Submit",
     "textualProgress": "Question: @current of @total questions",
     "jumpToQuestion": "Question %d of %total",
     "questionLabel": "Question",
     "readSpeakerProgress": "Question @current of @total",
     "unansweredText": "Unanswered",
     "answeredText": "Answered",
-    "currentQuestionText": "Current question"
+    "currentQuestionText": "Current question",
+    "navigationLabel": "Questions"
   },
   "poolSize": 5,
   "questions": [
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "Which one of the following is a number?",
 			"answers": [
@@ -127,7 +129,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "fa06e08a-97c0-448c-85c4-8ae704701715",
+			"subContentId": "f8450392-f2cc-4543-9665-57cf67fea921",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -135,7 +137,7 @@
 			}
 		},
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "Which one of the following is a letter?",
 			"answers": [
@@ -209,7 +211,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "9113c58e-2689-4545-a23a-ed83915b9544",
+			"subContentId": "fa2e8f9d-e8a7-4e6f-ad6c-61f4069bd3c4",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -217,7 +219,7 @@
 			}
 		},
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "2 + 3 =",
 			"answers": [
@@ -296,7 +298,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "33c99671-1fd9-4d2d-bae9-49c996581f8b",
+			"subContentId": "a7922cfc-b8de-4826-a974-8420f2885c3c",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -304,7 +306,7 @@
 			}
 		},
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "Which statement is true?",
 			"answers": [
@@ -383,7 +385,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "c9813575-6f15-4231-987b-24058d660562",
+			"subContentId": "618e82a0-c89b-40eb-9f2f-bed895a73cd0",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -391,7 +393,7 @@
 			}
 		},
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "The tenths digit of the number 7,654.321 is _____.",
 			"answers": [
@@ -470,7 +472,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "dc017cc3-01d7-469e-8063-57f2ae93c8c9",
+			"subContentId": "2e0fd753-a1b2-45f4-86da-76bf7ac1100c",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -478,7 +480,7 @@
 			}
 		},
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "(2)(-6) + (2 x 3) = ____.",
 			"answers": [
@@ -557,7 +559,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "869d4b3e-3eab-4660-8a67-20ab3abafc06",
+			"subContentId": "2fa17921-7d1b-4473-84cf-b5ec9f040a87",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -565,7 +567,7 @@
 			}
 		},
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "3 - 2 = _____.",
 			"answers": [
@@ -644,7 +646,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "a7a04223-494a-403a-abe8-f38d9fe7bd4b",
+			"subContentId": "850c45e8-6f71-476d-b489-cbe7679f3589",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -652,7 +654,7 @@
 			}
 		},
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "Jimmy has ₱10,000 in the bank. If he expects to earn ₱100 in interest by the end of one year, what is the annual rate of interest?",
 			"answers": [
@@ -731,7 +733,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "96fd2f20-b303-4b35-8ef7-56b72dd24d97",
+			"subContentId": "ea88889b-8a05-40e0-b77a-3fbfa87f08cd",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -739,7 +741,7 @@
 			}
 		},
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "The greatest common divisor (GCD) of 21, 14, and 7 is _____.",
 			"answers": [
@@ -818,7 +820,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "82ba7cc3-0358-4206-b381-49671cd770ed",
+			"subContentId": "19e392af-44a1-448b-9fa9-5c1c292a15f9",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",
@@ -826,7 +828,7 @@
 			}
 		},
 	{
-		"library": "H5P.MultiChoice 1.14",
+		"library": "H5P.MultiChoice 1.16",
 		"params": {
 			"question": "The property of real numbers which describes (1 + 2) + 3 = 3 + (1 + 2) is _____.",
 			"answers": [
@@ -905,7 +907,7 @@
 					"confirmLabel": "Confirm"
 				}
 			},
-			"subContentId": "609d4a24-ac17-4dfd-8561-20873ddecba7",
+			"subContentId": "0798d5f9-706f-4dfb-a8eb-3897fc96cdee",
 			"metadata": {
 				"contentType": "Multiple Choice",
 				"license": "U",

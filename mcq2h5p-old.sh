@@ -2,10 +2,10 @@
 
 
 #####
-# remove the old pretty versions: h5p-pr.json, content-pr.json, if they exist
+# remove the old h5p.json, content.json, if they exist
 #####
-if [ -f "./h5p-pr.json" ]; then rm ./h5p-pr.json; fi
-if [ -f "./content-pr.json" ]; then rm ./content-pr.json; fi
+if [ -f "./h5p.json" ]; then rm ./h5p.json; fi
+if [ -f "./content.json" ]; then rm ./content.json; fi
 sleep 3s # pause for a while
 
 #####
@@ -36,7 +36,7 @@ done < ./control.txt
 # create h5p.json based on the values of the control parameters read for
 # TITLE, AUTHOR, and LICENSE
 #####
-cat > h5p-pr.json << EOT
+cat > h5p.json << EOT
 {
   "title": $TITLE,
   "language": "und",
@@ -54,19 +54,19 @@ cat > h5p-pr.json << EOT
   "defaultLanguage": "en",
   "preloadedDependencies": [
     {
-      "machineName": "H5P.Image",
-      "majorVersion": "1",
-      "minorVersion": "1"
-    },
-    {
       "machineName": "H5P.MultiChoice",
       "majorVersion": "1",
-      "minorVersion": "16"
+      "minorVersion": "14"
     },
     {
       "machineName": "FontAwesome",
       "majorVersion": "4",
       "minorVersion": "5"
+    },
+    {
+      "machineName": "EmbeddedJS",
+      "majorVersion": "1",
+      "minorVersion": "0"
     },
     {
       "machineName": "H5P.JoubelUI",
@@ -79,6 +79,16 @@ cat > h5p-pr.json << EOT
       "minorVersion": "0"
     },
     {
+      "machineName": "Drop",
+      "majorVersion": "1",
+      "minorVersion": "0"
+    },
+    {
+      "machineName": "Tether",
+      "majorVersion": "1",
+      "minorVersion": "0"
+    },
+    {
       "machineName": "H5P.FontIcons",
       "majorVersion": "1",
       "minorVersion": "0"
@@ -86,38 +96,38 @@ cat > h5p-pr.json << EOT
     {
       "machineName": "H5P.Question",
       "majorVersion": "1",
-      "minorVersion": "5"
-    },
-    {
-      "machineName": "H5P.DragQuestion",
-      "majorVersion": "1",
-      "minorVersion": "14"
-    },
-    {
-      "machineName": "jQuery.ui",
-      "majorVersion": "1",
-      "minorVersion": "10"
+      "minorVersion": "4"
     },
     {
       "machineName": "H5P.QuestionSet",
       "majorVersion": "1",
-      "minorVersion": "20"
+      "minorVersion": "17"
     },
     {
       "machineName": "H5P.Video",
       "majorVersion": "1",
-      "minorVersion": "6"
+      "minorVersion": "5"
+    },
+    {
+      "machineName": "flowplayer",
+      "majorVersion": "1",
+      "minorVersion": "0"
+    },
+    {
+      "machineName": "H5P.MathDisplay",
+      "majorVersion": "1",
+      "minorVersion": "0"
     }
   ]
 }
 EOT
 
 #####
-# create the top part of the content-pr.json; use the values of 
+# create the top part of the content.json; uses the values of 
 # INTRODUCTION, PASS_PERCENTAGE, DISABLE_BACKWARDS_NAVIGATION, 
 # RANDOM_QUESTIONS, and POOL_SIZE
 #####
-cat >> content-pr.json << EOT
+cat >> content.json << EOT
 {
   "introPage": {
     "showIntroPage": true,
@@ -135,7 +145,6 @@ cat >> content-pr.json << EOT
     "showRetryButton": true,
     "noResultMessage": "Finished",
     "message": "Your result:",
-    "scoreBarLabel": "You got @finals out of @totals points",
     "overallFeedback": [
       {
         "from": 0,
@@ -145,27 +154,26 @@ cat >> content-pr.json << EOT
     "solutionButtonText": "Show solution",
     "retryButtonText": "Retry",
     "finishButtonText": "Finish",
-    "submitButtonText": "Submit",
     "showAnimations": false,
     "skippable": false,
     "skipButtonText": "Skip video"
   },
   "override": {
-    "checkButton": true
+    "checkButton": true,
+    "showSolutionButton": "on",
+    "retryButton": "on"
   },
   "texts": {
     "prevButton": "Previous question",
     "nextButton": "Next question",
     "finishButton": "Finish",
-    "submitButton": "Submit",
     "textualProgress": "Question: @current of @total questions",
     "jumpToQuestion": "Question %d of %total",
     "questionLabel": "Question",
     "readSpeakerProgress": "Question @current of @total",
     "unansweredText": "Unanswered",
     "answeredText": "Answered",
-    "currentQuestionText": "Current question",
-    "navigationLabel": "Questions"
+    "currentQuestionText": "Current question"
   },
   "poolSize": $POOL_SIZE,
   "questions": [
@@ -186,9 +194,9 @@ do
 		#echo "JSON for question part being written"
 		arrline=(`echo -e $line`)
 		line=`unset arrline[0]; echo ${arrline[*]}`
-		cat >> content-pr.json << EOT
+		cat >> content.json << EOT
 	{
-		"library": "H5P.MultiChoice 1.16",
+		"library": "H5P.MultiChoice 1.14",
 		"params": {
 			"question": "$line",
 			"answers": [
@@ -197,7 +205,7 @@ EOT
 	elif [ "${line:0:1}" == "" ]; then  # blank line or end of question
 		#echo "$line"
 		#echo  "JSON for end of question, after last choice has been processed"
-		cat >> content-pr.json << EOT
+		cat >> content.json << EOT
 					}
 				],
 				"behaviour": {
@@ -263,11 +271,11 @@ EOT
 EOT
 		# if this is NOT the last question in the pool
 		if [ "$n" -lt "$N_QUESTIONS" ]; then
-			cat >> content-pr.json << EOT
+			cat >> content.json << EOT
 		},
 EOT
 		else # this is for the last choice for the last question in the pool
-			cat >> content-pr.json << EOT
+			cat >> content.json << EOT
 		}
 EOT
 		fi
@@ -279,7 +287,7 @@ EOT
 		#echo "write JSON for a correct answer choice"
 		#if this is the first of the given choices 
 		if [ "$q" == "1" ]; then
-			cat >> content-pr.json << EOT
+			cat >> content.json << EOT
 					{
 						"text": "${line#'*'}",
 						"correct": true,
@@ -287,7 +295,7 @@ EOT
 EOT
 			q=`expr $q + 1`
 		else # if (q=2) this is NOT the first of the given choices
-			cat >> content-pr.json << EOT
+			cat >> content.json << EOT
 					},
 					{
 						"text": "${line#'*'}",
@@ -300,7 +308,7 @@ EOT
 		#echo "write JSON for wrong answer line"
 		#if this is the first of the given choices 
 		if [ "$q" == "1" ]; then 
-			cat >> content-pr.json << EOT
+			cat >> content.json << EOT
 					{
 						"text": "${line}",
 						"correct": false,
@@ -308,7 +316,7 @@ EOT
 EOT
 			q=`expr $q + 1`
 		else # if (q=2) this is NOT the first of the given choices
-			cat >> content-pr.json << EOT
+			cat >> content.json << EOT
 					},
 					{
 						"text": "${line}",
@@ -319,22 +327,16 @@ EOT
 	fi
 	i=`expr $i + 1`
 done < $1
-cat >> content-pr.json << EOT
+cat >> content.json << EOT
 	]
 }
 EOT
 
 #####
-# delete old h5p.json, content/content.json, if they exist 
-# then replace with the minified JSON files
+# uncomment the next two lines to minify the JSON files
 #####
-if [ -f "./h5p.json" ]; then rm ./h5p.json; fi
-if [ -f "./content/content.json" ]; then rm ./content/content.json; fi
-echo -e "\nMinifying the JSON files ...\n"
-sleep 3s # pause for a while
-script -q -c "jq -c -M < ./h5p-pr.json"; sed -n '2p' typescript | sed 's/.$//' > h5p.json
-script -q -c "jq -c -M < ./content-pr.json"; sed -n '2p' typescript | sed 's/.$//' > content.json
-rm typescript
+#script -q -c "jq -c -M < ./h5p.json"; sed -n '2p' typescript > h5p.json
+#script -q -c "jq -c -M < ./content.json"; sed -n '2p' typescript > content.json
 
 #####
 # set color tags (not all needed)
@@ -349,18 +351,15 @@ BLINK='\e[5m'
 OBLINK='\e[25m'
 NORM='\e[0m'
 
-mv ./h5p-pr.json ./myNewH5P-mcq
-mv ./h5p.json ./myNewH5P-mcq
-mv ./content-pr.json ./myNewH5P-mcq/content
-mv ./content.json ./myNewH5P-mcq/content
-if [ -e "./myNewH5P-mcq.h5p" ]; then rm ./myNewH5P-mcq.h5p; fi
-cd myNewH5P-mcq
-zip -r -D -X ../myNewH5P-mcq.h5p * >/dev/null
+mv ./h5p.json ./myNewH5P-mcq-old
+mv ./content.json ./myNewH5P-mcq-old/content
+if [ -e "./myNewH5P-mcq-old.h5p" ]; then rm ./myNewH5P-mcq-old.h5p; fi
+cd myNewH5P-mcq-old
+zip -r -D -X ../myNewH5P-mcq-old.h5p * >/dev/null
 cd $OLDPWD
-sleep 2s
-echo -e "\nThe h5p.json file was created in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq/h5p.json${NORM}"
-echo -e "The content.json that was created is in: ${BOLD}${YELLOW}./myNewH5P-mcq/content/content.json${NORM}"
-echo -e "The newly created multiple-choice H5P is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq.h5p${NORM}\n"
+echo -e "\nThe h5p.json file was created in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq-old/h5p.json${NORM}"
+echo -e "The content.json that was created is in: ${BOLD}${YELLOW}./myNewH5P-mcq-old/content/content.json${NORM}"
+echo -e "The newly created multiple-choice H5P is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq-old.h5p${NORM}\n"
 ###
 ##
 #

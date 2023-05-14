@@ -325,11 +325,11 @@ cat >> content-pr.json << EOT
 EOT
 
 #####
-# delete old h5p.json, content/content.json, if they exist 
+# delete old h5p.json, content.json, if they exist in this directory 
 # then replace with the minified JSON files
 #####
 if [ -f "./h5p.json" ]; then rm ./h5p.json; fi
-if [ -f "./content/content.json" ]; then rm ./content/content.json; fi
+if [ -f "./content.json" ]; then rm ./content.json; fi
 echo -e "\nMinifying the JSON files ...\n"
 sleep 3s # pause for a while
 script -q -c "jq -c -M < ./h5p-pr.json"; sed -n '2p' typescript | sed 's/.$//' > h5p.json

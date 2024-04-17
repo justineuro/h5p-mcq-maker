@@ -18,10 +18,11 @@ sleep 3s # pause for a while
 # DISABLE_BACKWARDS_NAVIGATION: set to false as default
 # RANDOM_QUESTIONS: set to true as default
 # POOL_SIZE: set to five (5) as default as there are 10 questions total
-# N_QUESTIONS: there are 10 questions in the myMCQuestions.txt file
+# N_QUESTIONS: there are 10 questions in the myMCQuestions.txt (in general, 
+#							 this is the total number of questions in your input file)
 #
+#####
 # * print to stdout the value of these parameters
-#
 #####
 echo -e "The following control parameters were set for the H5P to be made:"
 n_lines=1

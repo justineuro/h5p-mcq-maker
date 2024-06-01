@@ -233,7 +233,7 @@ EOT
 n_lines=`wc $1 | awk '{ print $1 }'`
 n_lines_nb=`grep -v '^$' $1 | wc | awk '{ print $1 }'`
 n_blank_lines=`expr $n_lines - $n_lines_nb`
-echo -e "\nThe number of questions in the $1: ${BOLD}$n_blank_lines.${NORM}"
+echo -e "\nThe number of questions to be read from $1: ${BOLD}$n_blank_lines.${NORM}"
 if [ "`grep 'N_QUESTIONS' control-eof.txt`" == "" ]; then 
 	echo -e "${BOLD}N_QUESTIONS${NORM} is not given in ${BOLD}control-eof.txt${NORM}\n"
 elif [ "$N_QUESTIONS" != "$n_blank_lines" ]; then
@@ -420,6 +420,7 @@ sleep 2s
 #####
 # notify locations of newly created files
 #####
+echo -e "\nThe number of questions read from $1: ${BOLD}$n_blank_lines.${NORM}"
 echo -e "\nThe ${BOLD}h5p.json${NORM} file that was created is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq-eof/${NORM}"
 echo -e "The ${BOLD}content.json${NORM} that was created is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq-eof/content/${NORM}"
 echo -e "The ${BLINK}${BOLD}newly created multiple-choice H5P${NORM} is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq-eof.h5p${NORM}\n"

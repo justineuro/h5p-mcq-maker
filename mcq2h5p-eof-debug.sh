@@ -221,12 +221,13 @@ EOT
 n_lines=`wc $1 | awk '{ print $1 }'`
 n_lines_nb=`grep -v '^$' $1 | wc | awk '{ print $1 }'`
 n_blank_lines=`expr $n_lines - $n_lines_nb`
-echo -e "\nThe number of questions in the $1: ${BOLD}$n_blank_lines.${NORM}"
+echo -e "\nThe number of questions to be read from $1: ${BOLD}$n_blank_lines.${NORM}"
 if [ "`grep 'N_QUESTIONS' control-eof.txt`" == "" ]; 
 	then echo -e "${BOLD}N_QUESTIONS${NORM} is not given in ${BOLD}control-eof.txt${NORM}\n"
 elif [ "$N_QUESTIONS" != "$n_blank_lines" ]; then
 	echo -e "${BLINK}${YELLOW}Warning:${NORM} ${BOLD}N_QUESTIONS=$N_QUESTIONS${NORM} does not match the total questions of ${BOLD}$n_blank_lines${NORM} in ${BOLD}$1${NORM}\n"
 fi
+sleep 15s
 
 i=1 # index for lines read from questions file 
 n_blanks=0 # counter for blank lines read
@@ -256,7 +257,7 @@ EOT
 	elif [ "$line" == "" ]; then  # blank line/end of question
 		n_blanks=`expr $n_blanks + 1` # increment no. of blank lines
 		echo "Current total of blank lines: $n_blanks"
-		echo "The number of questions read is now: $n."
+		echo "The number of questions read is now: $n_blanks."
 		echo "$line"
 		echo  "JSON for end of question, after last choice has been processed"
 		cat >> content-pr.json << EOT
@@ -413,6 +414,11 @@ cd myNewH5P-mcq
 zip -r -D -X ../myNewH5P-mcq-eof.h5p * >/dev/null
 cd $OLDPWD
 sleep 2s
+
+#####
+# notify locations of newly created files
+#####
+echo -e "\nThe number of questions read from $1: ${BOLD}$n_blank_lines.${NORM}"
 echo -e "\nThe ${BOLD}h5p.json${NORM} file that was created is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq-eof/${NORM}"
 echo -e "The ${BOLD}content.json${NORM} that was created is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq-eof/content/${NORM}"
 echo -e "The ${BLINK}${BOLD}newly created multiple-choice H5P${NORM} is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq-eof.h5p${NORM}\n"

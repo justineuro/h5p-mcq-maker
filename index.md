@@ -65,7 +65,7 @@ An alternative bash script, [`mcq2h5p-eof.sh`](./mcq2h5p-eof.sh), is available f
 ## Contents of this repository related to `mcq2h5p-eof.sh`
 This folder includes (among others):
 * [`mcq2h5p-eof.sh`](./mcq2h5p-eof.sh) - a bash script that converts a plain text file containing multiple-choice questions and answers to a [Question Set H5P](https://h5p.org/question-set) where the control file (`control-eof.txt`) doesn't necessarily have an initial set value for `N_QUESTIONS`. 
-* [`myNewH5P-mcq-eof`]https://github.com/justineuro/h5p-mcq-maker/tree/aabe663ead81d600c145fb58fcdd72f326fc4ee3/myNewH5P-mcq-eof) - a folder similar to [`myNewH5P-mcq`](https://github.com/justineuro/h5p-mcq-maker/tree/aabe663ead81d600c145fb58fcdd72f326fc4ee3/myNewH5P-mcq) folder above. 
+* [`myNewH5P-mcq-eof`](https://github.com/justineuro/h5p-mcq-maker/tree/aabe663ead81d600c145fb58fcdd72f326fc4ee3/myNewH5P-mcq-eof) - a folder similar to [`myNewH5P-mcq`](https://github.com/justineuro/h5p-mcq-maker/tree/aabe663ead81d600c145fb58fcdd72f326fc4ee3/myNewH5P-mcq) folder above. 
 * [`control-eof.txt`](./control-eof.txt) -  a plain text file containing the control parameters for your new H5P (e.g., `TITLE`, `AUTHOR`, `LICENSE`, `INTRODUCTION`, `PASS_PERCENTAGE`, `DISABLE_BACKWARDS_NAVIGATION`, `RANDOM_QUESTIONS`, `POOL_SIZE`, and possibly `N_QUESTIONS`; these are used for creating the `h5p.json` and `content.json` of your new H5P).  You would want to edit this to suit your own specifications.  You may also want to try different values for `N_QUESTIONS` or omit it altogether.
 * [`myMCQuestions.txt`](./myMCQuestions.txt) - as above.
 * [`myNewH5P-mcq-eof.h5p`](./myNewH5P-mcq-eof.h5p) - the H5P created by `mcq2h5p-eof.sh` from `myMCQuestions.txt`.

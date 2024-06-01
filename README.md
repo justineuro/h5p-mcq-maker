@@ -60,7 +60,12 @@ This folder includes (among others):
 * [`myNewH5P-mcq.h5p`](./myNewH5P-mcq.h5p) - the H5P created by `mcq2h5p.sh` from `myMCQuestions.txt`.
 
 ## Using `mcq2h5p-eof.sh` when `N_QUESTIONS` is not set
-An alternative bash script, [`mcq2h5p-eof.sh`](./mcq2h5p-eof.sh), is available for use when the control file doesn't contain an initially set value for `N_QUESTIONS`, the total number of questions in the questions file.  The number of questions is determined after the script has read the entire questions file.
+An alternative bash script, [`mcq2h5p-eof.sh`](./mcq2h5p-eof.sh), is available for use when the control file doesn't contain an initially set value for `N_QUESTIONS`, the total number of questions in the questions file.  The number of questions is determined after the script has read the entire questions file.  
+
+In a manner similar to the previous script, usage is:
+```bash
+./mcq2h5p-eof.sh myMCQuestions.txt
+```
 
 ## Contents of this repository related to `mcq2h5p-eof.sh`
 This folder includes (among others):

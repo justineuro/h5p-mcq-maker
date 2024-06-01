@@ -1,5 +1,50 @@
 #/bin/bash
+#===================================================================================
+#
+#	 				FILE:	mcq2h5p.sh
+#
+#				USAGE:	mcq2h5p.sh target-questions-file.txt
+#
+#		where target-questions-file.txt (it may be some other filename), containing your 
+#		MC questions and answers written in H5P Question Set template markup (see 
+#		https://h5p.org/question-set).
+#
+# DESCRIPTION:	Used for generating an H5P Questions Set (a set of multiple choice 
+#		questions with a single correct answer).  A control file (control.txt) includes 
+#		certain parameters for the H5P among which is N_QUESTIONS, the number 
+#		of questions in target-questions-file.txt.
+#
+#      AUTHOR:	J.L.A. Uro (justineuro@gmail.com)
+#     VERSION:	1.0.2
+#     LICENSE:	Creative Commons Attribution 4.0 International License (CC-BY)
+#     CREATED:	2023/04/02 12:00:00
+#    REVISION:	2024/06/01 10:24:01
+#==================================================================================
 
+#####
+# set color tags (not all needed)
+####
+BLACK='\e[1;30m'
+RED='\e[1;31m'
+GREEN='\e[1;32m'
+YELLOW='\e[1;33m'
+BLUE='\e[1;34m'
+BOLD='\e[1;39m'
+BLINK='\e[5m'
+OBLINK='\e[25m'
+NORM='\e[0m'
+
+#####
+# check if questions-file argument was passed at the command line
+# (Based on Advanced Bash-Scripting Guide 2014 by Mendel Cooper)
+#####
+E_NOARGS=85
+if [ -z "$1" ]; then
+	echo -e "${BLINK}${BOLD}${RED}Error ...${NORM}"
+	echo "Usage: ./`basename $0` target-questions-file.txt"
+	echo -e "(The ${BOLD}target-questions-file.txt${NORM} should be included at the command line.)"
+	exit $E_NOARGS
+fi
 
 #####
 # remove the old pretty versions: h5p-pr.json, content-pr.json, if they exist
@@ -24,7 +69,7 @@ sleep 3s # pause for a while
 #####
 # * print to stdout the value of these parameters
 #####
-echo -e "The following control parameters were set for the H5P to be made:"
+echo -e "The following control parameters were set for the H5P to be made (listed in control.txt):"
 n_lines=1
 while read line
 do 
@@ -172,19 +217,15 @@ cat >> content-pr.json << EOT
   "questions": [
 EOT
 
-
-i=1 # line number from input.txt
 q=0 # indicator if the question part in an item has been processed
-n=1 # counter for pool size
+n=0 # counter for number of questions read from the questions file
+
 declare -a arrline
-while read line
-do
-	#echo $i
-	#echo "n = " $n
+
+echo -e "\nReading `expr $n + 1`st question ..."
+while read line; do
 	# if this is a question line, write question
 	if [ "$q" == "0" ]; then 
-		#echo "$line"
-		#echo "JSON for question part being written"
 		arrline=(`echo -e $line`)
 		line=`unset arrline[0]; echo ${arrline[*]}`
 		cat >> content-pr.json << EOT
@@ -196,8 +237,8 @@ do
 EOT
 		q=`expr $q + 1` # indicator q set to 1
 	elif [ "${line:0:1}" == "" ]; then  # blank line or end of question
-		#echo "$line"
-		#echo  "JSON for end of question, after last choice has been processed"
+		n=`expr $n + 1` # increase counter for number of questions
+		echo "The number of questions read is now: $n."
 		cat >> content-pr.json << EOT
 					}
 				],
@@ -267,18 +308,16 @@ EOT
 			cat >> content-pr.json << EOT
 		},
 EOT
+			q=0 # set q to zero for next question line to be written
+			continue
 		else # this is for the last choice for the last question in the pool
 			cat >> content-pr.json << EOT
 		}
 EOT
+			break
 		fi
-			q=0 # set q to zero for next question line to be written
-			n=`expr $n + 1` # increase counter for pool size
 		# if this is a correct answer choice ...
 	elif [ "${line:0:1}" == "*" ]; then 
-		#echo "$line"
-		#echo "write JSON for a correct answer choice"
-		#if this is the first of the given choices 
 		if [ "$q" == "1" ]; then
 			cat >> content-pr.json << EOT
 					{
@@ -287,7 +326,7 @@ EOT
 						"tipsAndFeedback": {}
 EOT
 			q=`expr $q + 1`
-		else # if (q=2) this is NOT the first of the given choices
+		else # if (q>1) this is NOT the first of the given choices
 			cat >> content-pr.json << EOT
 					},
 					{
@@ -297,8 +336,6 @@ EOT
 EOT
 		fi
 	else # this must be a wrong answer line
-		#echo "$line"
-		#echo "write JSON for wrong answer line"
 		#if this is the first of the given choices 
 		if [ "$q" == "1" ]; then 
 			cat >> content-pr.json << EOT
@@ -308,7 +345,7 @@ EOT
 						"tipsAndFeedback": {}
 EOT
 			q=`expr $q + 1`
-		else # if (q=2) this is NOT the first of the given choices
+		else # if (q>1) this is NOT the first of the given choices
 			cat >> content-pr.json << EOT
 					},
 					{
@@ -329,39 +366,39 @@ EOT
 # delete old h5p.json, content.json, if they exist in this directory 
 # then replace with the minified JSON files
 #####
+# delete old JSON files
 if [ -f "./h5p.json" ]; then rm ./h5p.json; fi
 if [ -f "./content.json" ]; then rm ./content.json; fi
+
+# minify the new pretty JSON files
 echo -e "\nMinifying the JSON files ...\n"
-sleep 3s # pause for a while
+sleep 12s # pause for a while
 script -q -c "jq -c -M < ./h5p-pr.json"; sed -n '2p' typescript | sed 's/.$//' > h5p.json
 script -q -c "jq -c -M < ./content-pr.json"; sed -n '2p' typescript | sed 's/.$//' > content.json
 rm typescript
 
-#####
-# set color tags (not all needed)
-####
-BLACK='\e[1;30m'
-RED='\e[1;31m'
-GREEN='\e[1;32m'
-YELLOW='\e[1;33m'
-BLUE='\e[1;34m'
-BOLD='\e[1;39m'
-BLINK='\e[5m'
-OBLINK='\e[25m'
-NORM='\e[0m'
-
+# move the JSON files to the appropriate directories of the H5P
 mv ./h5p-pr.json ./myNewH5P-mcq
 mv ./h5p.json ./myNewH5P-mcq
 mv ./content-pr.json ./myNewH5P-mcq/content
 mv ./content.json ./myNewH5P-mcq/content
+
+#####
+# delete old copy of the H5P, if it exists, then
+# generate the new H5P in the current directory
+#####
 if [ -e "./myNewH5P-mcq.h5p" ]; then rm ./myNewH5P-mcq.h5p; fi
 cd myNewH5P-mcq
 zip -r -D -X ../myNewH5P-mcq.h5p * >/dev/null
 cd $OLDPWD
 sleep 2s
-echo -e "\nThe h5p.json file was created in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq/h5p.json${NORM}"
-echo -e "The content.json that was created is in: ${BOLD}${YELLOW}./myNewH5P-mcq/content/content.json${NORM}"
-echo -e "The newly created multiple-choice H5P is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq.h5p${NORM}\n"
+
+#####
+# notify locations of newly created files
+#####
+echo -e "\nThe ${BOLD}h5p.json${NORM} file that was created is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq/${NORM}"
+echo -e "The ${BOLD}content.json${NORM} that was created is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq/content/${NORM}"
+echo -e "The ${BLINK}${BOLD}newly created multiple-choice H5P${NORM} is in this directory: ${BOLD}${YELLOW}./myNewH5P-mcq.h5p${NORM}\n"
 ###
 ##
 #

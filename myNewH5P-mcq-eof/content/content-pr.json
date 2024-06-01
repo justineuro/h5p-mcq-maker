@@ -1,0 +1,918 @@
+{
+  "introPage": {
+    "showIntroPage": true,
+    "startButtonText": "Start Quiz",
+    "title": "THIS IS THE TITLE",
+    "introduction": "<p>A multiple-choice H5P Question Set made with h5p-mcq-maker.<br>\n&nbsp;</p>\n"
+  },
+  "progressType": "dots",
+  "passPercentage": 50,
+  "disableBackwardsNavigation": false,
+  "randomQuestions": true,
+  "endGame": {
+    "showResultPage": true,
+    "showSolutionButton": true,
+    "showRetryButton": true,
+    "noResultMessage": "Finished",
+    "message": "Your result:",
+    "scoreBarLabel": "You got @finals out of @totals points",
+    "overallFeedback": [
+      {
+        "from": 0,
+        "to": 100
+      }
+    ],
+    "solutionButtonText": "Show solution",
+    "retryButtonText": "Retry",
+    "finishButtonText": "Finish",
+    "submitButtonText": "Submit",
+    "showAnimations": false,
+    "skippable": false,
+    "skipButtonText": "Skip video"
+  },
+  "override": {
+    "checkButton": true
+  },
+  "texts": {
+    "prevButton": "Previous question",
+    "nextButton": "Next question",
+    "finishButton": "Finish",
+    "submitButton": "Submit",
+    "textualProgress": "Question: @current of @total questions",
+    "jumpToQuestion": "Question %d of %total",
+    "questionLabel": "Question",
+    "readSpeakerProgress": "Question @current of @total",
+    "unansweredText": "Unanswered",
+    "answeredText": "Answered",
+    "currentQuestionText": "Current question",
+    "navigationLabel": "Questions"
+  },
+  "poolSize": 5,
+  "questions": [
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "Which one of the following is a number?",
+			"answers": [
+					{
+						"text": "1",
+						"correct": true,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "p",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "q",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "r",
+						"correct": false,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "34fc411e-8400-45f5-8b27-809742999984",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}, 
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "Which one of the following is a letter?",
+			"answers": [
+					{
+						"text": "1",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "2",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "A",
+						"correct": true,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "46fe26b1-5440-4ea9-9828-5912c2f18241",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}, 
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "2 + 3 =",
+			"answers": [
+					{
+						"text": "3",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "4",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "5",
+						"correct": true,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "6",
+						"correct": false,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "2399b530-5f6e-4cfb-aa8b-583242be3ab5",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}, 
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "Which statement is true?",
+			"answers": [
+					{
+						"text": "\\(\\sqrt{5}\\) is a rational number",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "\\(0\\) is a positive number",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "\\(\\sqrt{3}\\) is a real number",
+						"correct": true,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "\\(\\sqrt{4}\\) is an irrational number",
+						"correct": false,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "3df527be-3fa0-426d-8288-5857e53a6924",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}, 
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "The tenths digit of the number 7,654.321 is _____.",
+			"answers": [
+					{
+						"text": "4",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "2",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "6",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "3",
+						"correct": true,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "6296fbca-b813-47f3-91ce-bb790f290e9e",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}, 
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "(2)(-6) + (2 x 3) = ____.",
+			"answers": [
+					{
+						"text": "-6",
+						"correct": true,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "12",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "6",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "0",
+						"correct": false,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "ed9bd9be-9382-491a-9571-12131f3e28a5",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}, 
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "3 - 2 = _____.",
+			"answers": [
+					{
+						"text": "1/2",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "0",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "1",
+						"correct": true,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "-1",
+						"correct": false,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "f98e89e5-5f1e-4a56-9f93-f35a3601dbe4",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}, 
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "Jimmy has ₱10,000 in the bank. If he expects to earn ₱100 in interest by the end of one year, what is the annual rate of interest?",
+			"answers": [
+					{
+						"text": "2%",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "4%",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "1%",
+						"correct": true,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "6%",
+						"correct": false,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "a167d18c-fee5-4620-8a2f-75bfd5a27d94",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}, 
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "The greatest common divisor (GCD) of 21, 14, and 7 is _____.",
+			"answers": [
+					{
+						"text": "14",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "7",
+						"correct": true,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "21",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "1",
+						"correct": false,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "91dc69ad-36fb-4d38-9cc3-323b284007bd",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}, 
+	{
+		"library": "H5P.MultiChoice 1.16",
+		"params": {
+			"question": "The property of real numbers which describes (1 + 2) + 3 = 3 + (1 + 2) is _____.",
+			"answers": [
+					{
+						"text": "Commutative",
+						"correct": true,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "Associative",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "Distributive",
+						"correct": false,
+						"tipsAndFeedback": {}
+					},
+					{
+						"text": "Reflexive",
+						"correct": false,
+						"tipsAndFeedback": {}
+					}
+				],
+				"behaviour": {
+					"enableRetry": true,
+					"enableSolutionsButton": true,
+					"enableCheckButton": true,
+					"type": "auto",
+					"singlePoint": false,
+					"randomAnswers": true,
+					"showSolutionsRequiresInput": true,
+					"confirmCheckDialog": false,
+					"confirmRetryDialog": false,
+					"autoCheck": false,
+					"passPercentage": 100,
+					"showScorePoints": true
+				},
+				"media": {
+					"disableImageZooming": false
+				},
+				"overallFeedback": [
+					{
+						"from": 0,
+						"to": 100
+					}
+				],
+				"UI": {
+					"checkAnswerButton": "Check",
+					"showSolutionButton": "Show solution",
+					"tryAgainButton": "Retry",
+					"tipsLabel": "Show tip",
+					"scoreBarLabel": "You got :num out of :total points",
+					"tipAvailable": "Tip available",
+					"feedbackAvailable": "Feedback available",
+					"readFeedback": "Read feedback",
+					"wrongAnswer": "Wrong answer",
+					"correctAnswer": "Correct answer",
+					"shouldCheck": "Should have been checked",
+					"shouldNotCheck": "Should not have been checked",
+					"noInput": "Please answer before viewing the solution",
+					"a11yCheck": "Check the answers. The responses will be marked as correct, incorrect, or unanswered.",
+					"a11yShowSolution": "Show the solution. The task will be marked with its correct solution.",
+					"a11yRetry": "Retry the task. Reset all responses and start the task over again."
+				},
+				"confirmCheck": {
+					"header": "Finish ?",
+					"body": "Are you sure you wish to finish ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Finish"
+				},
+				"confirmRetry": {
+					"header": "Retry ?",
+					"body": "Are you sure you wish to retry ?",
+					"cancelLabel": "Cancel",
+					"confirmLabel": "Confirm"
+				}
+			},
+			"subContentId": "ec8effbe-993b-4a5e-8aa2-a3931914e680",
+			"metadata": {
+				"contentType": "Multiple Choice",
+				"license": "U",
+				"title": "Untitled Multiple Choice"
+			}
+		}
+	]
+}

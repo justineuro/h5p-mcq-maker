@@ -16,9 +16,10 @@
 #		heve to be included.
 #
 #      AUTHOR:	J.L.A. Uro (justineuro@gmail.com)
-#     VERSION:	1.0.0
+#     VERSION:	1.0.1
 #     LICENSE:	Creative Commons Attribution 4.0 International License (CC-BY)
 #     CREATED:	2024/06/01 10:24:01
+#    REVISION:	2024/06/17 14:46:55
 #==================================================================================
 
 #####

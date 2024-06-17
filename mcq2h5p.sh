@@ -15,10 +15,10 @@
 #		of questions in target-questions-file.txt.
 #
 #      AUTHOR:	J.L.A. Uro (justineuro@gmail.com)
-#     VERSION:	1.0.2
+#     VERSION:	1.0.3
 #     LICENSE:	Creative Commons Attribution 4.0 International License (CC-BY)
 #     CREATED:	2023/04/02 12:00:00
-#    REVISION:	2024/06/01 10:24:01
+#    REVISION:	2024/06/17 14:46:55
 #==================================================================================
 
 #####

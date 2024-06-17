@@ -166,6 +166,16 @@ cat > h5p-pr.json << EOT
       "machineName": "H5P.Video",
       "majorVersion": "1",
       "minorVersion": "6"
+    },
+    {
+      "machineName": "flowplayer",
+      "majorVersion": "1",
+      "minorVersion": "0"
+    },
+    {
+      "machineName": "H5P.MathDisplay",
+      "majorVersion": "1",
+      "minorVersion": "0"
     }
   ]
 }

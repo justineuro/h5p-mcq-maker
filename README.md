@@ -71,11 +71,12 @@ In a manner similar to the previous script, usage is:
 
 ## Contents of this repository related to `mcq2h5p-eof.sh`
 This folder includes (among others):
+
 * [`mcq2h5p-eof.sh`](./mcq2h5p-eof.sh) - a bash script that converts a plain text file containing multiple-choice questions and answers to a [Question Set H5P](https://h5p.org/question-set) where the control file (`control-eof.txt`) doesn't necessarily have an initial set value for `N_QUESTIONS`. 
 * [`myNewH5P-mcq-eof`](./myNewH5P-mcq-eof) - a folder similar to [`myNewH5P-mcq`](./myNewH5P-mcq) folder above. 
 * [`control-eof.txt`](./control-eof.txt) -  a plain text file containing the control parameters for your new H5P (e.g., `TITLE`, `AUTHOR`, `LICENSE`, `INTRODUCTION`, `PASS_PERCENTAGE`, `DISABLE_BACKWARDS_NAVIGATION`, `RANDOM_QUESTIONS`, `POOL_SIZE`, and possibly `N_QUESTIONS`; these are used for creating the `h5p.json` and `content.json` of your new H5P).  You would want to edit this to suit your own specifications.  You may also want to try different values for `N_QUESTIONS` or omit it altogether.
 * [`myMCQuestions.txt`](./myMCQuestions.txt) - as above.
 * [`myNewH5P-mcq-eof.h5p`](./myNewH5P-mcq-eof.h5p) - the H5P created by `mcq2h5p-eof.sh` from `myMCQuestions.txt`.
 
-
+## License
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">h5p-mcq-maker</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/justineuro/" property="cc:attributionName" rel="cc:attributionURL">Justine Leon A. Uro</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/justineuro/h5p-mcq-maker" rel="dct:source">https://github.com/justineuro/h5p-mcq-maker</a>.

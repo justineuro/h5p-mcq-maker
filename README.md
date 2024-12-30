@@ -1,4 +1,4 @@
-**(Before using this bash script, note that a convenient way for creating a single H5P of any type is probably by using a free H5P viewer/editor app such as [Lumi](https://app.lumi.education/).  However, if you have a substantial amount of multiple-choice question sets to create, then this bash script comes in handy.)**  
+**(Before using this bash script, note that a convenient way for creating a single H5P of any type is probably by using a free H5P viewer/editor app such as [Lumi](https://lumi.education/en/).  However, if you have a substantial amount of multiple-choice question sets to create, then this bash script comes in handy.)**  
 
 # h5p-mcq-maker  
 
